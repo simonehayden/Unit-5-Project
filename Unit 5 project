@@ -1,0 +1,35 @@
+'''
+Name: Simone Hayden
+Date: 5/8/24
+Assignment: Unit 5 Project
+'''
+
+#prompt the user for box height
+
+while True:
+    box_height = int(input("Enter the box height (between 3 and 20): "))
+    if box_height >= 3 and box_height <=10:
+        break
+    else:
+        box_height=int(input("That number is out of bounds: Try again: "))
+        break
+    
+#prompt the user for box width
+
+while True:
+    box_width = int(input(f"Enter the box width between {box_height+1} and 20: "))
+    if box_height < box_width <= 20: 
+        break
+    else:
+        print ("That number is out of bounds: Try agaign ")
+        
+
+int sum = 0
+for i in range (box_height,box_width+1,1):
+    sum = sum + i
+    print (i,end=" ")
+double average = sum / (box_width-box_height)
+print(average)
+print("")
+
+
